@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Online Schedule lecture project
 
 The project successfully implements an online lecture scheduling system using a MERN stack architecture. It consists of two sections: one for admin and another for instructors. Users are required to log in with their username and password to access the admin panel.
 
