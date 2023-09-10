@@ -122,6 +122,7 @@ router.get('/admin/get-all-course', async (req, res) => {
 
 // route to get the course of partcular lecture
 router.get('/admin/get-course-instr', async (req, res) => {
+    res.json('Hello')
     try {
         const allCourse = await Course.find({});
         res.json(allCourse);
