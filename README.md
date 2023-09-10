@@ -25,17 +25,9 @@ Stacks used in this project is :
 - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 - # credentials required to use this app
-- admin login credentials		
-name	username	password
-satish	Satish@gmail.com	Satish@123
-		
--Instructor login credentials		
-name	username	password
-karan	Karan@gmail.com	Karan@123
-jitu	Jitu@gmail.com	Jitu@123
-sneha	Sneha@gmail.com	Sneha@123
-jagdish	Jagdish@gmail.com	Jagdish@123
-chetan	Chetan@gmail.com	Chetan@123
+
+![image](https://github.com/satty02/online-Lecture-scheduling/assets/85221760/955284d9-7909-4a8f-a3f6-3614791023c0)
+
 
 live link for this project:
 link- [https://online-lecture-scheduling-fe.vercel.app/](url);
