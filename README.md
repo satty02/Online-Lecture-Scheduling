@@ -26,7 +26,15 @@ Stacks used in this project is :
 
 - # credentials required to use this app
 
-![image](https://github.com/satty02/online-Lecture-scheduling/assets/85221760/955284d9-7909-4a8f-a3f6-3614791023c0)
+admin login credentials		
+satish	| Satish@gmail.com	| Satish@123
+		
+Instructor login credentials		
+karan |	Karan@gmail.com |	Karan@123,
+jitu	 | Jitu@gmail.com	| Jitu@123,
+sneha	| Sneha@gmail.com	| Sneha@123,
+jagdish	| Jagdish@gmail.com	| Jagdish@123,
+chetan	| Chetan@gmail.com	| Chetan@123,
 
 
 live link for this project:
