@@ -32,7 +32,6 @@ function Lectures({courseId}) {
               date: date,
             };
 
-            console.log(newLecture)
       
             const response = await axios.post(
               'https://online-lecture-scheduling.vercel.app/admin/assign-lecture',
@@ -58,14 +57,14 @@ function Lectures({courseId}) {
       const courseId = e.target.value
       try {
         // Make a GET request to retrieve the course by ID
-        const response = await axios.get(`http://localhost:5000/admin/get-course/${courseId}`);
+        const response = await axios.get(`https://online-lecture-scheduling.vercel.app/admin/get-course/${courseId}`);
         if(response.data.lectures){
           setLectureData(response.data.lectures);
         }else{
           setLectureData([{instructor:'No Lecture found'}])
         }
       } catch (error) {
-        console.error(error);
+        console.log(error);
       }
       }  
     return (
