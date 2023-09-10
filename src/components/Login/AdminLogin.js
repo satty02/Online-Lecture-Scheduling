@@ -40,7 +40,6 @@ function AdminLogin() {
 
             if (response.status === 200) { // Login successful, you can handle the response here
                 setMessage('Login successful');
-                console.log(response.data); // This will contain instructor details or a success message
                 setUserData(response.data);
                 setTimeout(() => {
                     navigate('/admin')
@@ -120,10 +119,9 @@ function AdminLogin() {
                                 </button>
                             </div>
 
-                            {
-                            errorMessage && <p className='error-msg font-inter mt-[-15px]'>
-                                {errorMessage}</p>
-                        }
+                            
+                            <p className={`error-msg font-inter mt-[-15px] ${errorMessage?'text-red-500':'' || message?'text-green-500':''}`}>{errorMessage?errorMessage:null || message?message:null}</p>
+                        
 
 
                             <button type="submit" class="w-full mt-[0px] bg-blue-700 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
@@ -131,7 +129,6 @@ function AdminLogin() {
                         </form>
                     </div>
                 </div>
-
             </section>
         </>
     )
