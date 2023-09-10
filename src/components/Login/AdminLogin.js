@@ -36,7 +36,7 @@ function AdminLogin() {
             password: password
         }
         try {
-            const response = await axios.post('http://localhost:5000/admin/login', formData);
+            const response = await axios.post('https://online-lecture-scheduling.vercel.app/admin/login', formData);
 
             if (response.status === 200) { // Login successful, you can handle the response here
                 setMessage('Login successful');

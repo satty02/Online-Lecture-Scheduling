@@ -35,7 +35,7 @@ function Lectures({courseId}) {
             console.log(newLecture)
       
             const response = await axios.post(
-              'http://localhost:5000/admin/assign-lecture',
+              'https://online-lecture-scheduling.vercel.app/admin/assign-lecture',
               newLecture
             );
             

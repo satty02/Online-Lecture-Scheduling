@@ -11,7 +11,7 @@ function InstructorPanel() {
     let searchTerm = userData && userData.instructor ? userData.instructor.name : '';
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/admin/get-course-instr`).then((response) => {
+        axios.get(`https://online-lecture-scheduling.vercel.app/admin/get-course-instr`).then((response) => {
             setCourses(response.data);
         }).catch((error) => {
             console.error('Error fetching courses:', error);

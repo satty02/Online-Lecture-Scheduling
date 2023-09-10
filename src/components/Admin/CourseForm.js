@@ -52,7 +52,7 @@ function CourseForm() {
         const formData = await courseData;
 
         try {
-            const response = await axios.post('http://localhost:5000/admin/add-course', formData);
+            const response = await axios.post('https://online-lecture-scheduling.vercel.app/admin/add-course', formData);
             console.log(response.data)
 
             let responeName = response.data.name

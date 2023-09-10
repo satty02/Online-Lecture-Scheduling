@@ -14,7 +14,7 @@ function CourseList() {
 
     // fetch the added courses
     const getCourse = async () => {
-        const response = await axios.get('http://localhost:5000/admin/get-all-course');
+        const response = await axios.get('https://online-lecture-scheduling.vercel.app/admin/get-all-course');
         setListofCourse(response.data);
     };
 
@@ -31,7 +31,7 @@ function CourseList() {
         e.preventDefault();
         const deleteCourse = await listOfCourse[e.target.value];
         try {
-            const response = await axios.delete(`http://localhost:5000/admin/delete-course`, {
+            const response = await axios.delete(`https://online-lecture-scheduling.vercel.app/admin/delete-course`, {
                 data: JSON.stringify(deleteCourse),
                 headers: {
                     'Content-Type': 'application/json'
