@@ -26,10 +26,10 @@ Stacks used in this project is :
 
 - # credentials required to use this app
 
-admin login credentials		
+admin login credentials	:-	
 satish	| Satish@gmail.com	| Satish@123
 		
-Instructor login credentials		
+Instructor login credentials :-	
 karan |	Karan@gmail.com |	Karan@123,
 jitu	 | Jitu@gmail.com	| Jitu@123,
 sneha	| Sneha@gmail.com	| Sneha@123,
