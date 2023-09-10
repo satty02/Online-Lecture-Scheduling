@@ -36,7 +36,6 @@ jitu	Jitu@gmail.com	Jitu@123
 sneha	Sneha@gmail.com	Sneha@123
 jagdish	Jagdish@gmail.com	Jagdish@123
 chetan	Chetan@gmail.com	Chetan@123
-![image](https://github.com/satty02/online-Lecture-scheduling/assets/85221760/3f650dfc-6d63-4f4f-9a2e-9f986c2f5ee3)
 
 live link for this project:
 link- [https://online-lecture-scheduling-fe.vercel.app/](url);
