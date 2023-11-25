@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const Course = require('../models/Course');
+const admins = require('../models/admin');
 
 // credential for admin 
 const admin = [{
@@ -9,7 +10,22 @@ const admin = [{
         username: "Satish@gmail.com",
         password: "Satish@123"
     }, 
-  ]
+  ];
+
+
+  router.post('/admin/signup',async (req,res)=>{
+    const {name,username,password} = req.body;
+
+    console.log(name, username, password)
+    if(!username ||  !password){
+        return res.status(400).json({msg: "please enter all the fields"})
+    }
+
+    const addAdmin = new admins({name,username,password});
+    const saveAdmin = await addAdmin.save();
+    res.json(saveAdmin);
+
+  })
 
 //   route to validate the credentials
 router.post('/admin/login', (req, res) => {

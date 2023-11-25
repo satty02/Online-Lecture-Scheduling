@@ -3,6 +3,7 @@
 import React, {useState} from 'react'
 import AdminLogin from './AdminLogin'
 import InstructorLogin from './InstructorLogin';
+import SignUp from './SignUp';
 
 function Login() {
     const [adminLogin, setAdminLogin] = useState(false);
@@ -35,6 +36,10 @@ function Login() {
                     instructorLogin && <InstructorLogin/>
                 } </div>
 
+            </div>
+
+            <div>
+                <SignUp/>
             </div>
 
 

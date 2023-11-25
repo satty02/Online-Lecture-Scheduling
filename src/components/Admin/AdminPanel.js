@@ -11,7 +11,8 @@ function AdminPanel() {
 
     const {userData} = useUser();
 
-    let user = userData && userData.instructor ? userData.instructor.name : '';
+    let user = userData;
+    console.log(userData)
 
     // if fails to fetch user directs to login page
     if (! user) {

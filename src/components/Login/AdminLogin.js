@@ -5,12 +5,14 @@ import on_eye from '../Instructor/asset/remove_red_eye.png';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import {useUser} from '../../userData';
+import { auth } from './firebaseAuth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function AdminLogin() {
     const {setUserData} = useUser();
 
     // to navigate to dashboard page after authenticating;
-
+    
     const navigate = useNavigate()
 
     const [username, setUsername] = useState('');
@@ -31,22 +33,23 @@ function AdminLogin() {
     const handleLogin = async (e) => {
         e.preventDefault();
 
-        const formData = {
-            username: username,
-            password: password
-        }
+        
         try {
-            const response = await axios.post('https://online-lecture-scheduling.vercel.app/admin/login', formData);
+            // const response = await axios.post('https://online-lecture-scheduling.vercel.app/admin/login', formData);
+            const response = await signInWithEmailAndPassword(auth,username,password)
 
-            if (response.status === 200) { // Login successful, you can handle the response here
+            const displayName = response && response.user ? response.user.displayName : '';
+
+            if (response.user) { // Login successful, you can handle the response here
                 setMessage('Login successful');
-                setUserData(response.data);
+                setUserData(displayName);
                 setTimeout(() => {
                     navigate('/admin')
                 }, 3000)
             }
         } catch (error) { // Handle login error
             console.error(error)
+            setErrormessage(error.message)
             if (error.response) {
                 setErrormessage(error.response.data.message); // Display the error message sent from the server
             } else {
@@ -54,6 +57,8 @@ function AdminLogin() {
             }
         }
     }
+
+    console.log()
 
     const handleEye = (e) => {
         e.preventDefault();
