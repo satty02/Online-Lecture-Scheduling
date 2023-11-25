@@ -37,12 +37,12 @@ function SignUp() {
     }
 
   return (
-    <div className='text-center'>
+    <div className='text-center border rounded-md p-2 bg-gray-50 mr-3'>
         <h1>Sign Up</h1>
-        <form onSubmit={handleSubmit} className='flex flex-col  justify-center items-center'>
-            <input className='border ring-1 bg-green-300' type='text' onChange={(e)=>setAdminName(e.target.value)} className='' placeholder='name' value={adminName}/>
-            <input type='email' onChange={(e)=>setEmail(e.target.value)} className='' placeholder='email' value={email}/>
-            <input  className='' placeholder='password' onChange={(e)=>setPassword(e.target.value)} value={password}/>
+        <form onSubmit={handleSubmit} className='flex flex-col  justify-center items-center gap-3'>
+            <input className='border rounded-md p-1 bg-white' type='text' onChange={(e)=>setAdminName(e.target.value)}  placeholder='Name' value={adminName}/>
+            <input  className='border rounded-md p-1 bg-white' type='email' onChange={(e)=>setEmail(e.target.value)}  placeholder='Email' value={email}/>
+            <input  className='border rounded-md p-1 bg-white' placeholder='Password' onChange={(e)=>setPassword(e.target.value)} value={password}/>
             <input className='border p-1 rounded bg-blue-600 text-white px-3' type='submit' value='submit'/>
         </form>
     </div>
